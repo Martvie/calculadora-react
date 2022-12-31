@@ -1,3 +1,5 @@
+import Input from "./components/Input";
+import Button from "./components/Button";
 import { Container, Content } from "./styles";
 
 const App = () => {
@@ -5,7 +7,9 @@ const App = () => {
     <div className="App">
     
        <Container>
-        <Content/> 
+        <Content>
+          <Input/>
+        </Content>
        </Container>
     </div>
   );
