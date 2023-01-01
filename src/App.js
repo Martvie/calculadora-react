@@ -1,6 +1,6 @@
 import Input from "./components/Input";
 import Button from "./components/Button";
-import { Container, Content, Row} from "./styles";
+import { Container, Content, Row } from "./styles";
 import { useState } from "react";
 
 const App = () => {
@@ -45,8 +45,31 @@ const App = () => {
     }
   }
 
-  //TODO Criar Multiplicação
-  //TODO Criar Divisão
+  const handleMulNumbers = () => {
+
+    if (firstNumber === '0') {
+      setFirstNumber(currentNumber);
+      setCurrentNumber('0')
+      setOperation('*')
+    } else {
+      const num = Number(firstNumber) * Number(currentNumber);
+      setCurrentNumber(String(num))
+      setOperation('')
+    }
+  }
+
+  const handleDivNumbers = () => {
+
+    if (firstNumber === '0') {
+      setFirstNumber(currentNumber);
+      setCurrentNumber('0')
+      setOperation('/')
+    } else {
+      const num = Number(firstNumber) / Number(currentNumber);
+      setCurrentNumber(String(num))
+      setOperation('')
+    }
+  }
   //TODO Criar decimais
   //TODO Resolver bug que não usa o resultado
 
@@ -59,6 +82,12 @@ const App = () => {
           break;
         case '-':
           handleSubNumbers()
+          break;
+        case '*':
+          handleMulNumbers()
+          break;
+        case '/':
+          handleDivNumbers()
           break;
         default:
           break;
@@ -74,9 +103,9 @@ const App = () => {
           <Input value={currentNumber} />
 
           <Row>
-            <Button label="x" onClick={() => handleAddNumber('0')} />
-            <Button label="÷" onClick={() => handleAddNumber('0')} />
-            <Button label="," onClick={() => handleAddNumber('0')} />
+            <Button label="x" onClick={handleMulNumbers} />
+            <Button label="÷" onClick={handleDivNumbers} />
+            <Button label="," onClick={() => handleAddNumber(',')} />
             <Button label="C" onClick={handleClear} />
           </Row>
           <Row>
