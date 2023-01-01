@@ -15,18 +15,13 @@ width: 80%;
 max-width: 300px;
 min-height: 350px;
 background-color: #FAFAFA;
+border-radius: 3%;
+overflow: hidden;
 `
 
 export const Row = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-itens: center;
-`
-
-export const Column = styled.div`
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-itens: center;
 `
