@@ -27,7 +27,7 @@ const App = () => {
       setOperation('+')
     } else {
       const num = Number(firstNumber) + Number(currentNumber);
-      setCurrentNumber(String(num))
+    setCurrentNumber(String(num))
       setOperation('')
     }
   }
@@ -62,15 +62,15 @@ const App = () => {
 
     if (firstNumber === '0') {
       setFirstNumber(currentNumber);
-      setCurrentNumber('0')
-      setOperation('/')
+      setCurrentNumber('0');
+      setOperation('/');
     } else {
       const num = Number(firstNumber) / Number(currentNumber);
       setCurrentNumber(String(num))
       setOperation('')
     }
   }
-  //TODO Criar decimais
+
   //TODO Resolver bug que não usa o resultado
 
 
@@ -105,7 +105,7 @@ const App = () => {
           <Row>
             <Button label="x" onClick={handleMulNumbers} />
             <Button label="÷" onClick={handleDivNumbers} />
-            <Button label="," onClick={() => handleAddNumber(',')} />
+            <Button label="." onClick={() => handleAddNumber('.')} />
             <Button label="C" onClick={handleClear} />
           </Row>
           <Row>
