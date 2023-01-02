@@ -71,7 +71,9 @@ const App = () => {
     }
   }
 
-  //TODO Resolver bug que não usa o resultado
+  const redirectionGithub = () => {
+    window.open("https://github.com/Martvie/calculadora-react", '_blank').focus();
+  }
 
 
   const handleEquals = () => {
@@ -129,6 +131,7 @@ const App = () => {
 
           <Row>
             <Button label="0" onClick={() => handleAddNumber('0')} />
+            <Button label={<i class="fa-brands fa-github"/>} onClick={redirectionGithub} />
           </Row>
 
         </Content>
