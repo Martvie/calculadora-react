@@ -5,7 +5,7 @@ Você testar o projeto [clicando aqui](https://calculadora-react-martvie.vercel.
 
 # imagens do projeto
 <p align="center">
-<img src="./src/images/screenshot">
+<img src="./images/screenshot.png">
 </p>
 
 
