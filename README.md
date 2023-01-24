@@ -54,11 +54,3 @@ Esse foi um projeto bem divertido de construir ainda com pouco contato com a bib
 ## Autor
 
 - [@Martvie](https://github.com/Martvie)
-
-
-## Stack utilizada
-
-**Front-end:** React, Redux, TailwindCSS
-
-**Back-end:** Node, Express
-
